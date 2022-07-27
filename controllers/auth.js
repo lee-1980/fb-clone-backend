@@ -26,6 +26,7 @@ const login = async (req, res) => {
 
 	const { _id: id, name, profileImage } = user;
 	const token = user.createJWT();
+	console.log(token,"response")
 	res.status(StatusCodes.OK).json({
 		id,
 		token,

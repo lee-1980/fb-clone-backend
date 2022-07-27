@@ -91,7 +91,10 @@ app.use(notFoundMiddleware);
 
 const start = async () => {
 	try {
-		await connectDB(process.env.MONGO_URI);
+		const username = process.env.USERNAME;
+		const password = process.env.DBPASSWORD;
+		const uri = `mongodb+srv://${username}:${password}@cluster0.giohg.mongodb.net/farm`;
+		await connectDB(uri);
 		server.listen(PORT, () => console.log(`Server is listening on port ${PORT}`));
 	} catch (error) {
 		console.log(error);

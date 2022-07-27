@@ -3,6 +3,7 @@ const jwt = require("jsonwebtoken");
 
 const authorize = (req, res, next) => {
 	const authHeader = req.headers.authorization;
+
 	if (!authHeader || !authHeader.startsWith("Bearer")) {
 		throw new AuthenticationError("Authentication Invalid");
 	}
@@ -13,6 +14,7 @@ const authorize = (req, res, next) => {
 		req.user = { id: payload.id, name: payload.name, profileImage: payload.profileImage };
 		next();
 	} catch (error) {
+		console.log(authHeader)
 		throw new AuthenticationError("Authentication Invalid");
 	}
 };
