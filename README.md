@@ -2,12 +2,6 @@
 
 It is a Social media app built using mern stack. You can create an account, create posts, like and comment on posts.
 
-### Links
-
--  Solution URL: [Frontend](https://github.com/adram3l3ch/fb-clone-frontend)
--  Solution URL: [Backend](https://github.com/adram3l3ch/fb-clone-backend)
--  Live Site URL: [Netlify](https://adramelech-social-media-app.netlify.app/)
-
 ### Built with
 
 -  Semantic HTML5 markup
